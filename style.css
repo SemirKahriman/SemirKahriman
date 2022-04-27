@@ -1,12 +1,12 @@
 h1{
     margin-left: auto;
     text-align:center;
-    background: rgb(209, 211, 209);
+    background: rgb(178, 181, 178);
     padding: 10px;
     margin-right:auto;
     font-size: 30px;
-	color: coral;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(226, 129, 93);
+    font-family:cursive
 
 }
 
@@ -22,3 +22,16 @@ h2{    text-align:center;
 .container{    text-align:center;
     font-family:Arial, Helvetica, sans-serif;
 }
+
+
+.image 
+{position: fixed;
+    bottom: 200;
+    right: 1000;
+
+    border: 3px solid #3175c3;}
+  
+
+body {
+    background-color: #e7d7c4;
+    }
