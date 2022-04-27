@@ -1,1 +1,177 @@
 
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>agentframework module &#8212; docs 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-agentframework">
+<span id="agentframework-module"></span><h1>agentframework module<a class="headerlink" href="#module-agentframework" title="Permalink to this headline">¶</a></h1>
+<p>Created on Tue Feb  1 11:30:17 2022</p>
+<p>&#64;author: Semir</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="agentframework.Agent">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">agentframework.</span></span><span class="sig-name descname"><span class="pre">Agent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agents</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">environment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ia</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">td_ys</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">td_xs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Defining all the agents, applying characteristics and coordinate start point set age of agents at 0,store starts at 0</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.distance_between">
+<span class="sig-name descname"><span class="pre">distance_between</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">agent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.distance_between" title="Permalink to this definition">¶</a></dt>
+<dd><p>Distance between :”calculate distance between self and other agents “</p>
+<p>Distance of Sheep between eachother based on pythagoras theorem</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.eat">
+<span class="sig-name descname"><span class="pre">eat</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.eat" title="Permalink to this definition">¶</a></dt>
+<dd><p>eat the environment by 10</p>
+<p>Returns:
+Store is increased by a value of 10
+Environment is decreased by a value of 10
+——–</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.excrete">
+<span class="sig-name descname"><span class="pre">excrete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.excrete" title="Permalink to this definition">¶</a></dt>
+<dd><p>If store of agent increases above 200 after eating the environment.</p>
+<p>Removes the store and increase that xy position on the environment by 50
+Store is decreased by 50 on the agent, and the environment is grown by 50 on that plot. 
+If store reaches above 350 agent will die</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.increase_age">
+<span class="sig-name descname"><span class="pre">increase_age</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.increase_age" title="Permalink to this definition">¶</a></dt>
+<dd><p>increase age by 1 until reaching 80 at which point agent classed as dead (false status)</p>
+<p>Returns:</p>
+<p>Agent will age with each iteration and then die at the age of 70
+None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>“move the agent based upon the set environment sequence up to 300”</p>
+<p>Returns:
+Agent moves +1 in the X or Y position
+With each movement store is decreased by 5
+None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.move_grave">
+<span class="sig-name descname"><span class="pre">move_grave</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.move_grave" title="Permalink to this definition">¶</a></dt>
+<dd><p>If Agent is classed as False due to Age Store or other attribute then</p>
+<p>Returns:
+Agent is moved to position (310,360) on the grid (graveyard) which is off the model screen</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="agentframework.Agent.sex">
+<span class="sig-name descname"><span class="pre">sex</span></span><a class="headerlink" href="#agentframework.Agent.sex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the sex of agent from value initial starting class as None into Male or Female,</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="agentframework.Agent.share_with_neighbours">
+<span class="sig-name descname"><span class="pre">share_with_neighbours</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbourhood</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#agentframework.Agent.share_with_neighbours" title="Permalink to this definition">¶</a></dt>
+<dd><p>Argument: Distance to neighbour must be less than the value of the environment
+neighbourhood : calculate distance between self and other agents and checks against the environment</p>
+<p>Store of the agents will be shared between eachother based on average (total store between two agents / 2)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">docs</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Semir.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/agentframework.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
